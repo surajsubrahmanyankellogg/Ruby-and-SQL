@@ -9,6 +9,25 @@ Contact.destroy_all
 # **************************
 
 # - Insert and read contact data for companies in the database
+puts "There are #{Company.all.count} companies"
+puts "There are #{Contact.all.count} contacts"
+
+apple = Company.find_by({"name" => "Apple"})
+puts apple.inspect
+
+tim = Contacts.new
+tim["first_name"] = "Ben"
+tim["last_name"] = "Stokes"
+tim["email"] = "LA"
+tim["company_id"] = apple["id"]
+tim.save
+
+contact = Contacts.new
+contact["first_name"] = "Ben"
+contact["last_name"] = "Stokes"
+contact["email"] = "LA"
+contact["company_id"] = apple["id"]
+contact.save
 
 # 1. insert new rows in the contacts table with relationship to a company
 

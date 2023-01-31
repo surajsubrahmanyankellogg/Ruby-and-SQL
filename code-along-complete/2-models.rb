@@ -31,6 +31,12 @@ new_company["state"] = "CA"
 new_company["url"] = "https://www.apple.com"
 new_company.save
 
+new_company = Company.new
+new_company["name"] = "Apple"
+new_company["city"] = "Cupertino"
+new_company["state"] = "CA"
+new_company["url"] = "https://www.apple.com"
+new_company.save
 # pay attention to the SQL in the log
 
 # How many rows are in the companies table?
